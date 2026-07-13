@@ -1,3 +1,20 @@
+# ML artifacts (CLAUDE.md: checkpoint/데이터셋 커밋 금지)
+checkpoints/
+*.weights
+*.pth
+*.ckpt
+*.model
+*.safetensors
+data/
+wandb/
+runs/
+outputs/
+videos/
+
+# Claude Code (개인 설정만 제외 — skills/rules는 커밋)
+.claude/settings.local.json
+CLAUDE.local.md
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
