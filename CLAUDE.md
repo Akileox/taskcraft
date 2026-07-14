@@ -26,7 +26,15 @@
 
 ## Commands
 - Java 버전 확인 (JDK 8 필요, `1.8.x` 출력돼야 함): `java -version`
-- (MineRL 설치/학습/평가 커맨드는 설치 완료 후 여기 추가)
+- venv activate: `.\.venv\Scripts\Activate.ps1`
+- MineRL v1.0 설치: PyPI에 없음, GitHub에서 직접 설치해야 하고 Windows에서는
+  공식 소스를 그대로 pip install하면 실패한다 (긴 경로 + gradlew.bat 서브프로세스
+  버그 + 창 리사이즈 hang, 총 3곳 패치 필요). 전체 절차와 패치 diff는
+  docs/research_notes/04_windows_native_setup_and_smoke_test.md 참고.
+  `git config --global core.longpaths true`가 먼저 필요.
+- MineRL env smoke test: `gym.make("MineRLTreechop-v0")` → `env.reset()` →
+  `env.step()` 확인. 창은 의도적으로 안 보이게 뜬다(GLFW_VISIBLE=false) —
+  정상 동작이며, 관측은 `obs['pov']`(64x64x3 RGB)로 직접 받는다.
 
 ## 환경 제약
 - **Windows 네이티브** (WSL2 아님), RTX 5060Ti 16GB. Python 3.9 venv + JDK 8을
