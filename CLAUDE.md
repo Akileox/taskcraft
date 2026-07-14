@@ -26,17 +26,19 @@
 
 ## Commands
 - Java 버전 확인 (JDK 8 필요, `1.8.x` 출력돼야 함): `java -version`
-- GPU passthrough 확인 (Docker, 참고용 — MineRL 자체는 Docker로 안 돌림): `docker run --rm --gpus all nvidia/cuda:12.4.0-base-ubuntu22.04 nvidia-smi`
 - (MineRL 설치/학습/평가 커맨드는 설치 완료 후 여기 추가)
 
 ## 환경 제약
-- Windows + WSL2(Ubuntu), RTX 5060Ti 16GB
-- MineRL은 WSL2에 직접 설치(Java JDK 8 + pip)하는 걸 기본으로 한다. Docker로
-  실행하지 않는다 — 공식 유지보수 Docker 이미지가 없고, headless 대안(xvfb)이
-  NVIDIA 드라이버와 충돌하는 사례가 많이 보고돼 있어, WSLg의 네이티브 디스플레이로
-  우회 없이 실행하는 쪽이 더 안정적이다. 이유 상세: docs/research_notes/02_minerl_install_strategy.md
-- Docker/GPU passthrough 자체는 검증 완료 상태로 남겨두고(docs/research_notes/00),
-  나중에 재현성 패키징이 필요해지면(컴퓨터 이전 등) 그때 다시 활용한다
+- **Windows 네이티브** (WSL2 아님), RTX 5060Ti 16GB. Python 3.9 venv + JDK 8을
+  Windows에 직접 설치해서 사용한다.
+- WSL2는 이 프로젝트에서 사용하지 않는다 — WSLg의 GUI compositor가 이 GPU/드라이버
+  조합(RTX 5060Ti + driver 610.x)에서 OpenGL(GLX) 컨텍스트 생성에 실패해 Minecraft
+  클라이언트가 기동하지 못함(`xeyes` 등 순수 X11 앱도 동일하게 실패, CUDA 연산
+  자체는 정상). 이전 프로젝트(Isaac Sim)에서도 동일 GPU에서 WSL 안 Vulkan
+  렌더링이 막혔던 적이 있고, 그때도 네이티브 Windows 전환으로 해결됨. 상세 경위:
+  docs/research_notes/02_minerl_install_strategy.md, 03_wslg_gpu_incompatibility.md
+- Docker/GPU passthrough 검증(docs/research_notes/00)은 WSL2 기준이라 이번
+  스코프에서는 참고용으로만 남겨둔다
 - VRAM 제약으로 풀 파인튜닝 대신 encoder freeze + policy head(또는 LoRA)만
   학습하는 걸 기본으로 한다
 - MineRL v1.0 (Minecraft 1.16.5, MCP-Reborn) 고정 — VPT/GROOT/STEVE-1과 동일 셋업.
