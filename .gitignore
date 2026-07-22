@@ -233,3 +233,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Vendored external research code (not ours to version)
+third_party/
