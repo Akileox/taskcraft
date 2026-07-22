@@ -23,7 +23,7 @@ task(나무 → 도구 제작 → 채굴)가 사람이 하는 도구 사용/제�
 | 순서 | 마일스톤 | 완료 기준 |
 |---|---|---|
 | 1 | 환경/도구 세팅 | ✅ 완료 — MineRL이 Windows 네이티브에서 정상 실행됨 (환경 생성 + step 호출 성공). 상세: docs/research_notes/04 |
-| 2 | Observation pipeline | DINO 등으로 RGB → feature 추출, 시각화로 sanity check 완료 |
+| 2 | Observation pipeline | 진행 중 — VPT/R3M/VIP/CLIP 4종 frozen encoder 설치 및 통합 인터페이스 완료(docs/research_notes/05), 실제 MineRL 프레임으로 시각화/sanity check는 미완 |
 | 3 | BC baseline | 나무 캐기~작업대까지 정성적으로 안정적으로 성공 |
 | 4 | DAgger 비교 | BC 대비 distribution shift 완화 효과를 정량적으로 비교 |
 | 5 | PPO 비교 | VRAM 제약 안에서(encoder freeze) IL 대비 개선 여부 확인 |
@@ -88,3 +88,5 @@ DeepMind가 2024~2025년에 이미 활발히 다루는 프론티어.
 - 환경 선택 근거 (MineRL vs MineDojo vs CraftGround): docs/research_notes/01_env_selection.md
 - 설치 전략 (Docker vs WSL2 네이티브, 2026-07-14 이후 Windows 네이티브로 재결정):
   docs/research_notes/02_minerl_install_strategy.md, 03_wslg_gpu_incompatibility.md
+- Frozen encoder(VPT/R3M/VIP/CLIP) 설치, GPU 커널 호환성, third_party 벤더링 방식:
+  docs/research_notes/05_encoder_pipeline_setup.md
