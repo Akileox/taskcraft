@@ -345,5 +345,4 @@ graph TD
 - [Self-Questioning Vision-Language Models: Reinforcement Learning for Compositional Visual Reasoning](docs/research_notes/09_self-questioning-vision-language-models-reinforcement-learning-for-compositional.md) — 2026-08-10 자동 수집
 - [Object Tokens as a Bridge Between Segmentation and Visual Question Answering in Robotic Surgery](docs/research_notes/08_object-tokens-as-a-bridge-between-segmentation-and-visual-question-answering-in-.md) — 2026-08-10 자동 수집
 - [SimWAM: A Simple World Action Model for End-to-End Autonomous Driving](docs/research_notes/07_simwam-a-simple-world-action-model-for-end-to-end-autonomous-driving.md) — 2026-08-10 자동 수집
-- [SimWAM: A Simple World Action Model for End-to-End Autonomous Driving](docs/research_notes/06_simwam-a-simple-world-action-model-for-end-to-end-autonomous-driving.md) — 2026-08-10 자동 수집
 - [OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models](docs/research_notes/05_osreward-instituting-standardized-evaluation-for-cross-platform-computer-use-rew.md) — 2026-08-10 자동 수집
