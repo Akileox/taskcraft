@@ -340,3 +340,6 @@ graph TD
   접근(DreamGen 등)의 두 한계(프롬프트 정밀도, plausibility 검증)를
   반례로 정리. 미해결 역설(데이터가 없어서 필요한 방법이 검증도 못 하는
   문제) 5절에 추가. 질문 로그 Q8, 사고 흐름 다이어그램 갱신.
+
+## References (auto)
+- [OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models](docs/research_notes/05_osreward-instituting-standardized-evaluation-for-cross-platform-computer-use-rew.md) — 2026-08-10 자동 수집
