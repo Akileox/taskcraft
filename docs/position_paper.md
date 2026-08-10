@@ -342,6 +342,7 @@ graph TD
   문제) 5절에 추가. 질문 로그 Q8, 사고 흐름 다이어그램 갱신.
 
 ## References (auto)
+- [Attention Is All You Need](docs/research_notes/11_attention-is-all-you-need.md) — 2026-08-10 자동 수집
 - [SFT Conflicts, RL Coexists: A Theoretical and Empirical Analysis of Multi-Task Learning for LLMs](docs/research_notes/10_sft-conflicts-rl-coexists-a-theoretical-and-empirical-analysis-of-multi-task-lea.md) — 2026-08-10 자동 수집
 - [Self-Questioning Vision-Language Models: Reinforcement Learning for Compositional Visual Reasoning](docs/research_notes/09_self-questioning-vision-language-models-reinforcement-learning-for-compositional.md) — 2026-08-10 자동 수집
 - [Object Tokens as a Bridge Between Segmentation and Visual Question Answering in Robotic Surgery](docs/research_notes/08_object-tokens-as-a-bridge-between-segmentation-and-visual-question-answering-in-.md) — 2026-08-10 자동 수집
