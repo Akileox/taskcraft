@@ -342,4 +342,5 @@ graph TD
   문제) 5절에 추가. 질문 로그 Q8, 사고 흐름 다이어그램 갱신.
 
 ## References (auto)
+- [SimWAM: A Simple World Action Model for End-to-End Autonomous Driving](docs/research_notes/06_simwam-a-simple-world-action-model-for-end-to-end-autonomous-driving.md) — 2026-08-10 자동 수집
 - [OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models](docs/research_notes/05_osreward-instituting-standardized-evaluation-for-cross-platform-computer-use-rew.md) — 2026-08-10 자동 수집
