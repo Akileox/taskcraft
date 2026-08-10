@@ -342,6 +342,7 @@ graph TD
   문제) 5절에 추가. 질문 로그 Q8, 사고 흐름 다이어그램 갱신.
 
 ## References (auto)
+- [Self-Questioning Vision-Language Models: Reinforcement Learning for Compositional Visual Reasoning](docs/research_notes/09_self-questioning-vision-language-models-reinforcement-learning-for-compositional.md) — 2026-08-10 자동 수집
 - [Object Tokens as a Bridge Between Segmentation and Visual Question Answering in Robotic Surgery](docs/research_notes/08_object-tokens-as-a-bridge-between-segmentation-and-visual-question-answering-in-.md) — 2026-08-10 자동 수집
 - [SimWAM: A Simple World Action Model for End-to-End Autonomous Driving](docs/research_notes/07_simwam-a-simple-world-action-model-for-end-to-end-autonomous-driving.md) — 2026-08-10 자동 수집
 - [SimWAM: A Simple World Action Model for End-to-End Autonomous Driving](docs/research_notes/06_simwam-a-simple-world-action-model-for-end-to-end-autonomous-driving.md) — 2026-08-10 자동 수집
