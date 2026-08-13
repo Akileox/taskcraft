@@ -342,6 +342,7 @@ graph TD
   문제) 5절에 추가. 질문 로그 Q8, 사고 흐름 다이어그램 갱신.
 
 ## References (auto)
+- [DreamFly: Causal Memory and Receding-Horizon Diffusion Planning for Aerial Vision-Language Navigation](docs/research_notes/13_dreamfly-causal-memory-and-receding-horizon-diffusion-planning-for-aerial-vision.md) — 2026-08-13 자동 수집
 - [Wan-Animate-2: Pushing the Application Boundaries of Character Animation](docs/research_notes/12_wan-animate-2-pushing-the-application-boundaries-of-character-animation.md) — 2026-08-11 자동 수집
 - [Attention Is All You Need](docs/research_notes/11_attention-is-all-you-need.md) — 2026-08-10 자동 수집
 - [SFT Conflicts, RL Coexists: A Theoretical and Empirical Analysis of Multi-Task Learning for LLMs](docs/research_notes/10_sft-conflicts-rl-coexists-a-theoretical-and-empirical-analysis-of-multi-task-lea.md) — 2026-08-10 자동 수집
