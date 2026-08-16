@@ -342,6 +342,7 @@ graph TD
   문제) 5절에 추가. 질문 로그 Q8, 사고 흐름 다이어그램 갱신.
 
 ## References (auto)
+- [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](docs/research_notes/15_rt-2-vision-language-action-models-transfer-web-knowledge-to-robotic-control.md) — 2026-08-16 자동 수집
 - [DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation](docs/research_notes/14_dreamx-phi-1-0-action-conditioned-video-world-model-for-robotic-manipulation.md) — 2026-08-15 자동 수집
 - [DreamFly: Causal Memory and Receding-Horizon Diffusion Planning for Aerial Vision-Language Navigation](docs/research_notes/13_dreamfly-causal-memory-and-receding-horizon-diffusion-planning-for-aerial-vision.md) — 2026-08-13 자동 수집
 - [Wan-Animate-2: Pushing the Application Boundaries of Character Animation](docs/research_notes/12_wan-animate-2-pushing-the-application-boundaries-of-character-animation.md) — 2026-08-11 자동 수집
