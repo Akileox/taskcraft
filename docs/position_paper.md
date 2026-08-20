@@ -342,6 +342,7 @@ graph TD
   문제) 5절에 추가. 질문 로그 Q8, 사고 흐름 다이어그램 갱신.
 
 ## References (auto)
+- [RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance](docs/research_notes/17_rynnvalue-scaling-robotic-value-foundation-models-with-temporal-distance.md) — 2026-08-20 자동 수집
 - [PRM-as-a-Judge 1.5: A Toolkit for Robot Process Assessment](docs/research_notes/16_prm-as-a-judge-1-5-a-toolkit-for-robot-process-assessment.md) — 2026-08-18 자동 수집
 - [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](docs/research_notes/15_rt-2-vision-language-action-models-transfer-web-knowledge-to-robotic-control.md) — 2026-08-16 자동 수집
 - [DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation](docs/research_notes/14_dreamx-phi-1-0-action-conditioned-video-world-model-for-robotic-manipulation.md) — 2026-08-15 자동 수집
