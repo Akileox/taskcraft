@@ -342,6 +342,7 @@ graph TD
   문제) 5절에 추가. 질문 로그 Q8, 사고 흐름 다이어그램 갱신.
 
 ## References (auto)
+- [Stage-Transition Dense Reward Modeling for Reinforcement Learning](docs/research_notes/18_stage-transition-dense-reward-modeling-for-reinforcement-learning.md) — 2026-08-22 자동 수집
 - [RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance](docs/research_notes/17_rynnvalue-scaling-robotic-value-foundation-models-with-temporal-distance.md) — 2026-08-20 자동 수집
 - [PRM-as-a-Judge 1.5: A Toolkit for Robot Process Assessment](docs/research_notes/16_prm-as-a-judge-1-5-a-toolkit-for-robot-process-assessment.md) — 2026-08-18 자동 수집
 - [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](docs/research_notes/15_rt-2-vision-language-action-models-transfer-web-knowledge-to-robotic-control.md) — 2026-08-16 자동 수집
