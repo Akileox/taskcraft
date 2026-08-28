@@ -342,6 +342,7 @@ graph TD
   문제) 5절에 추가. 질문 로그 Q8, 사고 흐름 다이어그램 갱신.
 
 ## References (auto)
+- [WarpSAC: Towards the Pinnacle of Scalable Off-policy RL by Rethinking Exploration and Exploitation](docs/research_notes/21_warpsac-towards-the-pinnacle-of-scalable-off-policy-rl-by-rethinking-exploration.md) — 2026-08-28 자동 수집
 - [Co-RL: Unsupervised Reasoning Emerges from Diverse Cohort in Multi-agent RL](docs/research_notes/20_co-rl-unsupervised-reasoning-emerges-from-diverse-cohort-in-multi-agent-rl.md) — 2026-08-22 자동 수집
 - [Zetta $ζ$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence](docs/research_notes/19_zetta-an-efficient-closed-loop-embodied-harness-for-self-evolving-physical-intel.md) — 2026-08-22 자동 수집
 - [Stage-Transition Dense Reward Modeling for Reinforcement Learning](docs/research_notes/18_stage-transition-dense-reward-modeling-for-reinforcement-learning.md) — 2026-08-22 자동 수집
