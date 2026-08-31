@@ -11,24 +11,44 @@ taskcraft는 이 아이디어의 첫 검증대다. Minecraft를 testbed로 골�
 task(나무 → 도구 제작 → 채굴)가 사람이 하는 도구 사용/제어의 축소판이면서도
 비교적 통제 가능한 환경이기 때문이다.
 
-## 확정 스코프 (10주, ~2026-09 입대 전 완료)
-- 목표: 나무 → 작업대 → 돌곡괭이 → (가능하면) 철 채굴
-- 핵심 산출물: 같은 서브태스크에서 BC vs DAgger, BC vs PPO 비교 실험 + 리포트
-- stretch (시간 남을 때만): 다이아 채굴 진입
-- World Model / Planning / Cross-Embodiment: 이번 프로젝트에서 코드화하지 않는다.
-  아이디어와 이유는 이 문서에만 기록하고, 실제 구현은 복학 후 랩 합류 시점에
-  다시 판단한다.
+## 확정 스코프 (2026-08-31 재검토 중 — 입대 2026-09-30 전후, 오늘 기준 약 4주)
 
-## 마일스톤 (날짜가 아니라 의존성 순서로 관리)
+**이 절은 2026-08-12부터 재검토 중이다.** 원래 스코프(BC vs DAgger vs PPO 비교)가
+아래 최종 비전(embodiment-agnostic task representation)을 직접 검증하지 않는다는
+문제를 확인했고(docs/position_paper.md 6절 Q9~Q12), 우선순위를 "간이
+cross-embodiment 파일럿"(사람 시연 → world model → 형태가 다른 embodiment로 이식
+검증)으로 옮기는 중이다. 2026-08-31에 한 번 더 조정했다 — 물리 로봇 키트는
+배송/조립 리스크가 남은 기간(실질 4주)을 통째로 잡아먹을 수 있어 보류하고,
+Minecraft 안에서 플레이어의 embodiment 자체를 바꾸는 방안(겉날개 비행 vs 보트
+탑승, 겉날개가 잠정 우세)으로 대체했다(position_paper.md 6절 Q13~Q14). 세부 사항
+(target embodiment, 검증 task)은 아직 미정 — 확정되는 대로 이 절을 다시 갱신한다.
+World Model 코드화를 금지했던 아래 항목도 이 재검토로 무효화됐다(스코프 확장을
+CLAUDE.md Don't 규정에 따라 사용자에게 확인받음, position_paper.md 6절 Q10 참고).
+
+- (재검토 전 원래 스코프, 참고용으로 남김) 목표: 나무 → 작업대 → 돌곡괭이 →
+  (가능하면) 철 채굴. 핵심 산출물: BC vs DAgger, BC vs PPO 비교 실험 + 리포트.
+- (신규, 설계 중) 남은 기간 중 일부는 world model/cross-embodiment 이론을 블로그
+  "[이론]" 시리즈(akileo-vault `04-Projects/taskcraft-theory-series.md` 큐 관리)로
+  정리하는 데 쓰고, 남는 기간은 Minecraft 내 embodiment 교체 파일럿 설계·실행에
+  쓴다.
+- World Model / Cross-Embodiment: 이전엔 "코드화하지 않는다"였으나, 위 재검토로
+  파일럿 규모로는 실제 구현 대상이 됐다. 다만 Genie 수준의 정식 world model
+  학습은 남은 기간 1인 프로젝트로는 불가능하다고 보고, R3M/VIP처럼 이미 공개된
+  embodiment-agnostic 표현을 얼린 채 갖다 쓰는 축소판을 현실적인 방향으로 잠정
+  검토 중(확정 아님, position_paper.md 6절 Q12).
+
+## 마일스톤 (날짜가 아니라 의존성 순서로 관리, 2026-08-31 재검토로 4번 이후 갱신 필요)
 | 순서 | 마일스톤 | 완료 기준 |
 |---|---|---|
 | 1 | 환경/도구 세팅 | ✅ 완료 — MineRL이 Windows 네이티브에서 정상 실행됨 (환경 생성 + step 호출 성공). 상세: docs/research_notes/04 |
-| 2 | Observation pipeline | 진행 중 — VPT/R3M/VIP/CLIP 4종 frozen encoder 설치 및 통합 인터페이스 완료(docs/research_notes/05), 실제 MineRL 프레임으로 시각화/sanity check는 미완 |
-| 3 | BC baseline | 나무 캐기~작업대까지 정성적으로 안정적으로 성공 |
-| 4 | DAgger 비교 | BC 대비 distribution shift 완화 효과를 정량적으로 비교 |
-| 5 | PPO 비교 | VRAM 제약 안에서(encoder freeze) IL 대비 개선 여부 확인 |
-| 6 | 분기점 판단 | 철 채굴까지 안정적이면 다이아 도전, 아니면 정리 단계로 전환 |
-| 7 | 정리 | 실험 리포트, 데모 영상, README/연구노트 마감 |
+| 2 | Observation pipeline | ✅ 완료 — VPT/R3M/VIP/CLIP 4종 frozen encoder 설치 및 통합 인터페이스 완료(docs/research_notes/05) |
+| 3 | [이론] 시리즈 (신규) | 미착수 — world model/cross-embodiment 개념, 큐: akileo-vault `04-Projects/taskcraft-theory-series.md` |
+| 4 | 간이 cross-embodiment 파일럿 설계 (신규) | 설계 전 — target embodiment 선정(겉날개/보트, 겉날개 잠정 우세), 검증 task 확정, 최소 파이프라인 정의. [이론] 시리즈 마지막 편에서 구체화 예정 |
+| 5 | 파일럿 실행 | 설계 완료 후 착수 |
+| 6 | 정리 | 실험 리포트, 데모 영상, README/연구노트 마감 |
+
+(참고: 이전 스코프의 BC baseline/DAgger 비교/PPO 비교 마일스톤은 보류됨 —
+position_paper.md 4절/6절 Q9 참고. 재개 여부 미정.)
 
 ## 우선순위 논문 (paper-review skill로 docs/research_notes/에 정리)
 상세 비교/차별점 분석은 docs/position_paper.md 3절 참고. 여기서는 목록만 관리.
@@ -80,9 +100,9 @@ DeepMind가 2024~2025년에 이미 활발히 다루는 프론티어.
 논문 이해 자체보다 "내 아이디어가 기존 연구와 어떻게 다른가"를 설명할 수 있는 게
 더 중요하다는 판단(2026-07-21)에 따라, docs/position_paper.md에 이 프로젝트의
 문제의식 · 선행연구 지형 · 아이디어의 차별점 · 파일럿 결과(성공/실패 무관) ·
-다음 단계를 담은 글을 매주 갱신하며 쓴다. 실험(BC vs DAgger vs PPO)은 계획대로
-진행하되, 이 문서의 근거 자료로 취급한다 — 실험 자체가 아니라 이 문서가 입대 전
-최종 산출물이다.
+다음 단계를 담은 글을 매주 갱신하며 쓴다. 실험(2026-08-12부터 간이
+cross-embodiment 파일럿으로 재설계 중, 위 확정 스코프 절 참고)은 이 문서의
+근거 자료로 취급한다 — 실험 자체가 아니라 이 문서가 입대 전 최종 산출물이다.
 
 ## 참고 결정 로그
 - 환경 선택 근거 (MineRL vs MineDojo vs CraftGround): docs/research_notes/01_env_selection.md
