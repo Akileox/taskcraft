@@ -10,8 +10,9 @@
 
 ## 확정 스코프 (2026-08-31 재검토 중 — 입대 2026-09-30 전후, 약 4주 남음)
 아래는 원래 스코프였으나 2026-08-12에 재검토 시작, 2026-08-31에 한 번 더 조정.
-상세 경위와 근거는 docs/position_paper.md 6절 Q9~Q15, docs/roadmap.md "확정 스코프"
-참고 — 여기서는 반복하지 않는다.
+상세 경위와 근거는 docs/position_paper.md 6절, docs/roadmap.md "확정 스코프"
+참고 — 여기서는 반복하지 않는다. 날짜별 세부 논의 로그는 2026-09-01부로 비공개
+vault(`akileo-vault/04-Projects/taskcraft-decision-log.md`)에서 관리한다.
 - 우선순위를 "간이 cross-embodiment 파일럿"(사람 시연 → world model → Minecraft
   내 embodiment 교체로 이식 검증, 겉날개/보트 중 겉날개 잠정 우세)으로 옮기는 중.
   Target embodiment/검증 task는 아직 미정.
@@ -31,7 +32,10 @@
 - configs/       — 실험 설정 (yaml). 실험은 항상 여기서 시작
 - docs/roadmap.md          — 최종 비전 + 10주 로드맵
 - docs/experiment_log.md   — 실험 기록 누적본 (append-only)
-- docs/research_notes/     — 논문별 정리
+
+논문별 정리·엔지니어링 세팅 로그는 2026-09-01부로 이 repo에 두지 않는다 —
+비공개 vault(`akileo-vault/02-Papers/`, `04-Projects/taskcraft-engineering-log.md`)에서
+관리한다.
 
 ## Commands
 - Java 버전 확인 (JDK 8 필요, `1.8.x` 출력돼야 함): `java -version`
@@ -39,7 +43,7 @@
 - MineRL v1.0 설치: PyPI에 없음, GitHub에서 직접 설치해야 하고 Windows에서는
   공식 소스를 그대로 pip install하면 실패한다 (긴 경로 + gradlew.bat 서브프로세스
   버그 + 창 리사이즈 hang, 총 3곳 패치 필요). 전체 절차와 패치 diff는
-  docs/research_notes/04_windows_native_setup_and_smoke_test.md 참고.
+  `akileo-vault/04-Projects/taskcraft-engineering-log.md`의 04번 절 참고.
   `git config --global core.longpaths true`가 먼저 필요.
 - MineRL env smoke test: `gym.make("MineRLTreechop-v0")` → `env.reset()` →
   `env.step()` 확인. 창은 의도적으로 안 보이게 뜬다(GLFW_VISIBLE=false) —
@@ -53,9 +57,9 @@
   클라이언트가 기동하지 못함(`xeyes` 등 순수 X11 앱도 동일하게 실패, CUDA 연산
   자체는 정상). 이전 프로젝트(Isaac Sim)에서도 동일 GPU에서 WSL 안 Vulkan
   렌더링이 막혔던 적이 있고, 그때도 네이티브 Windows 전환으로 해결됨. 상세 경위:
-  docs/research_notes/02_minerl_install_strategy.md, 03_wslg_gpu_incompatibility.md
-- Docker/GPU passthrough 검증(docs/research_notes/00)은 WSL2 기준이라 이번
-  스코프에서는 참고용으로만 남겨둔다
+  `akileo-vault/04-Projects/taskcraft-engineering-log.md`의 02~03번 절 참고.
+- Docker/GPU passthrough 검증(같은 로그 00번 절)은 WSL2 기준이라 이번 스코프에서는
+  참고용으로만 남겨둔다
 - VRAM 제약으로 풀 파인튜닝 대신 encoder freeze + policy head(또는 LoRA)만
   학습하는 걸 기본으로 한다
 - MineRL v1.0 (Minecraft 1.16.5, MCP-Reborn) 고정 — VPT/GROOT/STEVE-1과 동일 셋업.

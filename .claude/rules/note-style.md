@@ -5,8 +5,10 @@ paths:
 
 # 연구노트 작성 스타일 (docs/ 전체 공통)
 
-이 규칙은 experiment_log, research_notes, roadmap 등 docs/ 아래 모든 문서에 적용된다.
-포트폴리오로도 쓰일 수 있다는 전제로 작성한다.
+이 규칙은 experiment_log, roadmap, position_paper 등 docs/ 아래 모든 문서에 적용된다.
+포트폴리오로도 쓰일 수 있다는 전제로 작성한다. (research_notes/는 2026-09-01부로
+폐지, akileo-vault로 이관 — paper-review/reproduce-baseline skill을 쓸 때는
+이 스타일 규칙을 수동으로 따를 것.)
 
 ## 원칙
 1. **초심자의 눈으로 쓴다.** 몇 달 뒤(입대 후 포함) 다시 읽었을 때, 지금 당연하게

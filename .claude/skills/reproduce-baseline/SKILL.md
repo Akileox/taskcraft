@@ -19,11 +19,14 @@ description: |
 3. 설치 방식은 기본적으로 WSL2 네이티브(pip/conda)로 한다. Docker는 원본 repo가
    공식 유지보수 이미지를 제공하는 경우에만 사용하고, 없다고 해서 새로
    Dockerfile을 작성하지 않는다 — MineRL 사례처럼 관리 부담 대비 이득이
-   적을 수 있다 (docs/research_notes/02_mineRL_install_strategy.md 참고)
+   적을 수 있다 (`akileo-vault/04-Projects/taskcraft-engineering-log.md`의
+   02번 절 참고)
 4. 최소 검증: 원본 논문의 데모 태스크 1개만 우리 환경에서 재현해서 숫자가
    비슷한 범위인지 확인 (완전 일치는 기대하지 않음)
-5. 재현 과정, 막힌 지점, 조정한 부분을 `docs/research_notes/`에 별도 파일로 기록
-   (paper-review skill과 별개로, "재현 로그"로 남긴다)
+5. 재현 과정, 막힌 지점, 조정한 부분을 이 repo가 아니라
+   `akileo-vault/04-Projects/taskcraft-engineering-log.md`에 별도 절로 추가해
+   기록한다(2026-09-01부로 이 repo에는 저장하지 않음, paper-review skill과
+   별개로 "재현 로그"로 남긴다). akileo-vault/CLAUDE.md의 확인 절차를 따를 것.
 
 # Don't
 - VRAM 확인 없이 바로 원본 설정 그대로 학습을 시작하지 않는다

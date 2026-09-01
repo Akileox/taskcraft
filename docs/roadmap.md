@@ -15,15 +15,15 @@ task(나무 → 도구 제작 → 채굴)가 사람이 하는 도구 사용/제�
 
 **이 절은 2026-08-12부터 재검토 중이다.** 원래 스코프(BC vs DAgger vs PPO 비교)가
 아래 최종 비전(embodiment-agnostic task representation)을 직접 검증하지 않는다는
-문제를 확인했고(docs/position_paper.md 6절 Q9~Q12), 우선순위를 "간이
+문제를 확인했고(docs/position_paper.md 6절), 우선순위를 "간이
 cross-embodiment 파일럿"(사람 시연 → world model → 형태가 다른 embodiment로 이식
 검증)으로 옮기는 중이다. 2026-08-31에 한 번 더 조정했다 — 물리 로봇 키트는
 배송/조립 리스크가 남은 기간(실질 4주)을 통째로 잡아먹을 수 있어 보류하고,
 Minecraft 안에서 플레이어의 embodiment 자체를 바꾸는 방안(겉날개 비행 vs 보트
-탑승, 겉날개가 잠정 우세)으로 대체했다(position_paper.md 6절 Q13~Q14). 세부 사항
+탑승, 겉날개가 잠정 우세)으로 대체했다(position_paper.md 6절 참고). 세부 사항
 (target embodiment, 검증 task)은 아직 미정 — 확정되는 대로 이 절을 다시 갱신한다.
 World Model 코드화를 금지했던 아래 항목도 이 재검토로 무효화됐다(스코프 확장을
-CLAUDE.md Don't 규정에 따라 사용자에게 확인받음, position_paper.md 6절 Q10 참고).
+CLAUDE.md Don't 규정에 따라 사용자에게 확인받음, position_paper.md 6절 참고).
 
 - (재검토 전 원래 스코프, 참고용으로 남김) 목표: 나무 → 작업대 → 돌곡괭이 →
   (가능하면) 철 채굴. 핵심 산출물: BC vs DAgger, BC vs PPO 비교 실험 + 리포트.
@@ -35,23 +35,25 @@ CLAUDE.md Don't 규정에 따라 사용자에게 확인받음, position_paper.md
   파일럿 규모로는 실제 구현 대상이 됐다. 다만 Genie 수준의 정식 world model
   학습은 남은 기간 1인 프로젝트로는 불가능하다고 보고, R3M/VIP처럼 이미 공개된
   embodiment-agnostic 표현을 얼린 채 갖다 쓰는 축소판을 현실적인 방향으로 잠정
-  검토 중(확정 아님, position_paper.md 6절 Q12).
+  검토 중(확정 아님, position_paper.md 6절 참고).
 
 ## 마일스톤 (날짜가 아니라 의존성 순서로 관리, 2026-08-31 재검토로 4번 이후 갱신 필요)
 | 순서 | 마일스톤 | 완료 기준 |
 |---|---|---|
-| 1 | 환경/도구 세팅 | ✅ 완료 — MineRL이 Windows 네이티브에서 정상 실행됨 (환경 생성 + step 호출 성공). 상세: docs/research_notes/04 |
-| 2 | Observation pipeline | ✅ 완료 — VPT/R3M/VIP/CLIP 4종 frozen encoder 설치 및 통합 인터페이스 완료(docs/research_notes/05) |
+| 1 | 환경/도구 세팅 | ✅ 완료 — MineRL이 Windows 네이티브에서 정상 실행됨 (환경 생성 + step 호출 성공) |
+| 2 | Observation pipeline | ✅ 완료 — VPT/R3M/VIP/CLIP 4종 frozen encoder 설치 및 통합 인터페이스 완료 |
 | 3 | [이론] 시리즈 (신규) | 미착수 — world model/cross-embodiment 개념, 큐: akileo-vault `04-Projects/taskcraft-theory-series.md` |
 | 4 | 간이 cross-embodiment 파일럿 설계 (신규) | 설계 전 — target embodiment 선정(겉날개/보트, 겉날개 잠정 우세), 검증 task 확정, 최소 파이프라인 정의. [이론] 시리즈 마지막 편에서 구체화 예정 |
 | 5 | 파일럿 실행 | 설계 완료 후 착수 |
 | 6 | 정리 | 실험 리포트, 데모 영상, README/연구노트 마감 |
 
 (참고: 이전 스코프의 BC baseline/DAgger 비교/PPO 비교 마일스톤은 보류됨 —
-position_paper.md 4절/6절 Q9 참고. 재개 여부 미정.)
+position_paper.md 4절/6절 참고. 재개 여부 미정.)
 
-## 우선순위 논문 (paper-review skill로 docs/research_notes/에 정리)
+## 우선순위 논문
 상세 비교/차별점 분석은 docs/position_paper.md 3절 참고. 여기서는 목록만 관리.
+개별 논문 리뷰는 akileo(사용자)의 개인 vault(02-Papers/)에서 관리한다(공개
+repo 아님, 2026-09-01부로 이 repo에는 더 이상 논문별 노트를 만들지 않음).
 
 ### Minecraft 에이전트 계열 (같은 embodiment 안의 문제)
 - **VPT (Video PreTraining)** — 인간 플레이 영상을 행동 정책으로 연결하는 방법.
@@ -105,8 +107,7 @@ cross-embodiment 파일럿으로 재설계 중, 위 확정 스코프 절 참고)
 근거 자료로 취급한다 — 실험 자체가 아니라 이 문서가 입대 전 최종 산출물이다.
 
 ## 참고 결정 로그
-- 환경 선택 근거 (MineRL vs MineDojo vs CraftGround): docs/research_notes/01_env_selection.md
-- 설치 전략 (Docker vs WSL2 네이티브, 2026-07-14 이후 Windows 네이티브로 재결정):
-  docs/research_notes/02_minerl_install_strategy.md, 03_wslg_gpu_incompatibility.md
-- Frozen encoder(VPT/R3M/VIP/CLIP) 설치, GPU 커널 호환성, third_party 벤더링 방식:
-  docs/research_notes/05_encoder_pipeline_setup.md
+환경 선택(MineRL vs MineDojo vs CraftGround), 설치 전략(Docker vs WSL2 네이티브 vs
+Windows 네이티브), frozen encoder(VPT/R3M/VIP/CLIP) 설치·GPU 커널 호환성 등
+세부 엔지니어링 로그는 2026-09-01부로 비공개 vault에서 관리한다(이 repo에는
+더 이상 두지 않음).

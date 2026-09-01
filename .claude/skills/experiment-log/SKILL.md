@@ -28,7 +28,9 @@ description: |
 ```
 
 4. 이전 항목과 비교해서 개선/악화 여부를 한 줄로 요약해 덧붙인다
-5. 특이한 실패 패턴이면 `docs/research_notes/`에 별도로 원인 분석을 남길지 사용자에게 물어본다
+5. 특이한 실패 패턴이면 `akileo-vault/04-Projects/taskcraft-engineering-log.md`에
+   별도로 원인 분석을 남길지 사용자에게 물어본다(2026-09-01부로 이 repo에는
+   저장하지 않음)
 
 # Don't
 - 이전 로그를 덮어쓰지 않는다 (항상 append)
